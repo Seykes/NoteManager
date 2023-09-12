@@ -1,7 +1,15 @@
+"""
+Module for storage wrapping functions
+"""
+
+
 import functools
 
 
 def with_str(string):
+    """
+    Wrapper function for create __str__ return type in functions
+    """
     def wrapper (f):
         class FuncType:
             def __call__ (self, *args, **kwargs):
